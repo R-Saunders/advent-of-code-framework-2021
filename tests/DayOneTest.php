@@ -25,7 +25,8 @@ it('can process the first puzzle input', function() {
         DayOnePartOne::process(
             Loader::load(__DIR__ . '/fixtures/day-one.txt')
         )
-    )->toEqual("<insert-your-answer-here>");
+    )->toEqual(1581);
+
 });
 
 it('can process the second puzzle input', function() {
@@ -33,5 +34,5 @@ it('can process the second puzzle input', function() {
         DayOnePartTwo::process(
             Loader::load(__DIR__ . '/fixtures/day-one.txt')
         )
-    )->toEqual("<insert-your-answer-here>");
+    )->toEqual(1618);
 });

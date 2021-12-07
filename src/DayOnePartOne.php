@@ -8,6 +8,15 @@ class DayOnePartOne
 {
     public static function process(array $input): int
     {
-        return 1;
+        return collect($input)
+            ->map(fn($val) => intval($val))
+            ->sliding()
+            ->reduce(function($count,$chunk) {
+                if ($chunk->last() > $chunk->first()){
+                    return $count + 1;
+                } else {
+                    return $count;
+                }
+            },0);
     }
 }
